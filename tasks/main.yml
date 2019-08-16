@@ -1,0 +1,9 @@
+---
+# tasks file for ansible-role-postgresql
+
+# configue tiller connectivity if required
+- include: tiller.yml
+  when: l_helm_host is not defined or l_helm_port is not defined
+
+# install postgresql helm chart
+- include: chart.yml

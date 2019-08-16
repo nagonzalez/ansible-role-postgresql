@@ -1,0 +1,23 @@
+---
+# defaults file for ansible-role-postgresql
+
+postgresql_helm_chart:
+  name: postgresql
+  version: 6.2.1
+  release: postgresql-prod
+  namespace: postgresql
+  source:
+    type: repo
+    location: https://kubernetes-charts.storage.googleapis.com
+  state: present
+  values: {}
+  # postgresqlDatabase: "artifactory"
+  # postgresqlUsername: "postgresql"
+  # postgresqlPassword: postgresql
+  # postgresqlConfiguration:
+  #   maxConnections: "1500"
+  # service:
+  #   port: 5432
+  # persistence:
+  #   enabled: true
+  #   size: 50Gi
